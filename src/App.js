@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Filters from "./Components/Fiters";
+import Navbar from "./Components/Navbar";
+import Sidebar from "./Components/SideBar";
+import VideoContainer from "./Components/VideoContainer";
+// import Filters from "./Components/Filters";
+import { btnArr } from "./Components/filterArray/filtersArray";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Navbar />
+      <Sidebar />
+
+      {/* Main content wrapper */}
+     
+
+        <div className="filters">
+  {btnArr.map((btnObj, index) => (
+    <Filters key={index} text={btnObj.text} />
+  ))}
+</div>
+<VideoContainer/>
+      </div>
   );
 }
 

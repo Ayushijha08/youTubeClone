@@ -1,0 +1,45 @@
+/* Filters bar - modern YouTube style */
+.filters {
+  position: fixed;
+  left: 240px;
+  top: 60px;
+  width: calc(100% - 240px);
+  height: 90px;
+  background: #0f0f0f;
+  border-top: 1px solid #303030;
+  border-bottom: 1px solid #303030;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  z-index: 10;
+-ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.filters::-webkit-scrollbar {
+  display: none;
+}
+.filter-options {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #272727;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Hover effect like YouTube */
+.filter-options:hover {
+  background: #3f3f3f;
+}
+
+/* Active state */
+.filter-options.active {
+  color: #000;
+  background: #ffffff;
+}
