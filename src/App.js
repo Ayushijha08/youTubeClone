@@ -1,27 +1,34 @@
+import { useState } from "react";
 import "./App.css";
-import Filters from "./Components/Fiters";
-import Navbar from "./Components/Navbar";
-import Sidebar from "./Components/SideBar";
-import VideoContainer from "./Components/VideoContainer";
-// import Filters from "./Components/Filters";
-import { btnArr } from "./Components/filterArray/filtersArray";
 
+import Navbar from "./Components/Navbar";
+
+// import Filters from "./Components/Filters";
+import {Route, Routes, useLocation} from "react-router-dom"
+import VideoPage from "./Components/VideoPage";
+import Home from "./Components/Home";
 function App() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [videos, setVideos] = useState([]);
+  
+  const location = useLocation()
+  console.log("videos", videos);
+console.log(location.pathname,"location");
+
   return (
     <div className="App">
-      <Navbar />
-      <Sidebar />
-
-      {/* Main content wrapper */}
+      <Navbar
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        setVideos={setVideos}
+      />
      
-
-        <div className="filters">
-  {btnArr.map((btnObj, index) => (
-    <Filters key={index} text={btnObj.text} />
-  ))}
-</div>
-<VideoContainer/>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home setVideos={setVideos} setSearchQuery={setSearchQuery} videos={videos}/>}/>
+        <Route path="/video-page" element={<VideoPage setVideos={setVideos} videos={videos}/>}/>
+        
+      </Routes>
+    </div>
   );
 }
 

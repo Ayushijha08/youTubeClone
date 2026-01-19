@@ -1,0 +1,158 @@
+.title{
+  margin: 0;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.25;
+  margin-top: 20px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;       
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.channel-name{
+  font-size: 14px;
+  margin: 2px 0;
+  color: #979797;
+}
+.channel-icon{
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  min-width: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 2px 6px rgba(10, 10, 10, 0.03);
+}
+.channel-icon img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.thumbnail{
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  overflow: hidden;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f3f4f6, #eaeef2);
+}
+.thumbnail img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video_card{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 12px;
+  width: 100%;
+  max-width: var(--max-width);
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.channel-row{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start; /* icon top align */
+}
+.video-text{
+  display: flex;
+  flex-direction: column; /* title + channel name next line */
+  min-width: 0; /* ellipsis properly kaam kare */
+}
+
+.channelTitle {
+  margin: 2px ; /* title se thoda gap */
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #aaaaaa;
+  font-family: Roboto, Arial, sans-serif;
+  cursor: pointer;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+
+  transition: color 0.2s ease;
+}
+
+
+/* Hover effect like YouTube */
+.channelTitle:hover {
+  color: #ffffff;
+}
+.views{
+
+}
+.duration{
+
+}
+
+.related-container .video_card {
+  flex-direction: row;
+  padding: 6px;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* small thumbnail */
+.related-container .thumbnail {
+  width: 168px;
+  height: 94px;
+  padding-top: 0;
+  flex-shrink: 0;
+}
+
+.related-container .thumbnail img {
+  position: static;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* align text vertically */
+.related-container .channel-row {
+  align-items: flex-start;
+}
+
+/* title smaller */
+.related-container .title {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  margin-top: 0;
+  -webkit-line-clamp: 2;
+}
+
+/* channel icon smaller */
+.related-container .channel-icon {
+  width: 36px;
+  height: 36px;
+  margin-top: 0;
+}
+
+/* channel name */
+.related-container .channelTitle {
+  font-size: 0.8rem;
+}

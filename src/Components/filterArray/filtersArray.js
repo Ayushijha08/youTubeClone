@@ -3,7 +3,7 @@ export const btnArr = [
   { text: "Web Development" },
   { text: "Artificial Intelligence" },
   { text: "Entertainment" },
-  { text: "Fairy Tales" },
+  { text: "Fairy Tales"},
   { text: "Trending" },
   { text: "Fashion" },
   { text: "Movies" },

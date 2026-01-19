@@ -1,0 +1,34 @@
+.related-container {
+  width: 100%;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+
+/* .related-wrapper .video_card {
+  display: flex;
+  gap: 10px;
+} */
+
+.related-wrapper .thumbnail {
+  width: 168px;
+  height: 94px;
+  display: none;
+  padding-top: 0;
+}
+
+.related-wrapper .channel-icon {
+  display: none; /* YouTube like */
+}
+
+.related-wrapper .title {
+  font-size: 14px;
+  -webkit-line-clamp: 2;
+}
+
+.related-wrapper .channelTitle {
+  font-size: 12px;
+}

@@ -22,7 +22,7 @@ import { GoVideo } from "react-icons/go";
 import { TfiDownload } from "react-icons/tfi";
 import { IoLogoYoutube } from "react-icons/io5";
 
-function Sidebar({ isOpen }) {
+function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebar-section">
